@@ -1,0 +1,1 @@
+**High availability** (**HA**) is a characteristic of a system which aims to ensure an agreed level of operational performance, usually [uptime](https://en.wikipedia.org/wiki/Uptime "Uptime"), for a higher than normal period.

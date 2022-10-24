@@ -1,0 +1,1 @@
+Ephemeral computing is the practice of creating a virtual computing environment as a need arises and then destroying that environment when the need is met, and the resources are no longer in demand.

@@ -1,0 +1,1 @@
+Cold HDD (sc1) volumes offer the lowest cost of block storage in AWS. They are ideal for workloads characterized by large (1 MB) block sizes which need less than 80 MB/s of [[throughput]] per TB or 250 MB/s per volume with bursting, while generally needing under 12 MB/s per TB of [[throughput]] for their baseline needs.

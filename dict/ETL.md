@@ -1,0 +1,1 @@
+In computing, extract, transform, load is a three-phase process where data is extracted, transformed and loaded into an output data [[container]]. The data can be collated from one or more sources and it can also be outputted to one or more destinations.

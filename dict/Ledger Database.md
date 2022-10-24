@@ -1,0 +1,1 @@
+In its simplest form, a Ledger Database is **a database that stores accounting data**. More specifically, a ledger database can store the current and historical value of a company's financial data.

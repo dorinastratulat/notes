@@ -1,0 +1,1 @@
+vCenter Server is the centralized management utility for [[VMware]], and is used to manage virtual machines, multiple [[ESXi]] hosts, and all dependent components from a single centralized location. [[VMware]] vMotion and svMotion require the use of vCenter and [[ESXi]] hosts.

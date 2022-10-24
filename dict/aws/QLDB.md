@@ -1,0 +1,1 @@
+Amazon Quantum Ledger Database (Amazon QLDB) is a fully managed ledger database service. It's very helpful when you need to keep your data immutable and maintain a cryptographically verifiable transaction log of all changes made to it.

@@ -1,0 +1,1 @@
+Hibernation is **a technology used in certain operating systems**. It allows to save the contents of the system memory onto a hard disk or other permanent storage. The computer can then be powered off.

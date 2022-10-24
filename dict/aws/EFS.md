@@ -1,0 +1,1 @@
+Amazon Elastic File System (Amazon EFS) is **a simple, serverless, set-and-forget, elastic file system**. There is no minimum fee or setup charge. You pay only for the storage you use, for read and write access to data stored in Infrequent Access storage classes, and for any provisioned [[throughput]].

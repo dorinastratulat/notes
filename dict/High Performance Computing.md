@@ -1,0 +1,1 @@
+**High-performance computing** (**HPC**) uses [supercomputers](https://en.wikipedia.org/wiki/Supercomputer "Supercomputer") and [computer clusters](https://en.wikipedia.org/wiki/Computer_cluster "Computer cluster") to solve advanced computation problems.

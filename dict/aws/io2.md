@@ -1,0 +1,1 @@
+io2 is **a high performance [[EBS]] storage option designed for business-critical, I/O intensive database applications**, such as SAP HANA, Oracle, [[Microsoft SQL Server]], and [[IBM DB2]] that have high [[durability]] requirements.

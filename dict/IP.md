@@ -1,0 +1,1 @@
+IP stands for "**Internet Protocol**,"q which is the set of rules governing the format of data sent via the internet or local network. In essence, IP addresses are the identifier that allows information to be sent between devices on a network: they contain location information and make devices accessible for communication.

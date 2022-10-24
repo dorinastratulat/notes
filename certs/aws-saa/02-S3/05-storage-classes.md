@@ -1,0 +1,41 @@
+- [[S3]] standard
+  - [[High availability]]
+  - High [[durability]]
+  - Stored in >= 3 [[Availability Zone|AZ]]s
+  - 99.99% availability
+  - 99.999999999% [[durability]]
+  - website, [[Content Delivery Network|CDN]], [[big data]], mobile and gaming
+- [[S3]] Standard Infrequent Access
+  - stored like [[S3]] standard
+  - infrequently accessed data
+  - rapid access
+  - pay-to-access, minimized storage cost
+  - long term storage, backups, disaster recovery
+  - 99.99% availability
+  - 99.999999999% [[durability]]
+- [[S3]] One Zone Infrequent Access
+  - redundantly stored in 1 [[Availability Zone|AZ]]
+  - infrequently accessed
+  - long lived
+  - non-critical
+  - minimized cost
+  - 99.95% availability
+  - 99.999999999% [[durability]]
+- [[S3]] Intelligent Tiering
+  - frequent and infrequent access
+  - auto moves data to most cost effective tier
+  - 99.99% availability
+  - 99.999999999% [[durability]]
+
+- Glacier Instant Retrieval
+  - long term archiving
+  - instant retrieval time
+- Glacier Flexible Retrieval
+  - retrieval can be minutes up to 12 hrs
+  - non production backups / archives
+- Glacier Deep Archive
+  - cheapest storage class
+  - retain datasets for 7-10 yrs for regulatory
+  - standard retrieval is 12 hours
+  - bulk retrieval is 48 hours
+- All glaciers have 99.99% availability and 11x9s [[durability]]

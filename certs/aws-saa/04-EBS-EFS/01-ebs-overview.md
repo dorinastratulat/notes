@@ -1,0 +1,109 @@
+# EBS & EFS 01 - EBS Overview
+
+- [[EBS|Elastic Block Store (EBS)]]
+	- different types of volumes
+	- use cases for each volume type
+	- attach to [[EC2]] instance
+	- virtual hard disk in the cloud
+- mission critical data
+	- production workloads
+- [[High Availability|highly available]]
+	- automatically replicated within a single [[Availability Zone|AZ]]
+	- protected against hardware failures
+- scalable
+	- dynamically increase capacity with no downtime or perf impact
+- volume types
+	- general purpose SSD ([[gp2]])
+		- 3 [[IOPS]] per GiB
+		- max 16,000 [[IOPS]] per volume
+		- [[gp2]] volumes < 1TB can burst to 3,000 [[IOPS]]
+		- good for boot volumes
+		- development and test applications that aren't latency sensitive
+  - general purpose SSD ([[gp3]])
+    - new version of general purpose
+    - predictable 3,000 [[IOPS]] baseline perf
+    - 125 MiB/s regardless of vol size
+    - high performance, low cost
+      - [[MySQL]], [[Apache Cassandra|Cassandra], virtual desktop, [[Hadoop]]
+    - scale up to 16,000 [[IOPS]] and 1,000 MiB/s for more money
+    - top perf of [[gp3]] is 4x faster than max [[throughput]] of [[gp2]] vols
+  - provisioned [[IOPS]] SSD ([[io1]])
+    - legacy
+    - up to 64,000 [[IOPS]] per volume (50 [[IOPS]] per GiB)
+    - use if you need > 16,000 [[IOPS]]
+    - high performance, most expensive
+    - I/O-intensive applications
+  - provisioned [[IOPS]] SSD ([[io2]])
+    - same price as [[io1]]
+    - [[Durability|higher durability]] and more [[IOPS]]
+    - 500 [[IOPS]] per GiB
+    - 99.999% [[Durability|durability]] instead of 99.9%
+    - I/O-intensive applications
+    - applications that need high levels of [[durability]]
+  - [[Throughput]] Optimized HDD ([[st1]])
+    - low cost HDD volume (magnetic storage)
+    - baseline 40 MB/s per TB
+    - burst 250 MB/s per TB
+    - max [[throughput]] of 500 MB/s per vol
+    - frequently accessed, [[throughput]] intensive workloads
+      - [[Big data]], [[data warehouse]], [[ETL]], log processing
+    - cost effective to store mountains of data
+    - cannot be a boot vol
+  - Cold HDD ([[sc1]])
+    - lowest cost option
+    - baseline of 12 MB/s per TB
+    - burst to 80 MB/s per TB
+    - max [[throughput]] of 250 MB/s per vol
+    - good choice for colder data requiring few scans per day
+      - file server
+      - lowest cost and performance is not a factor
+    - can't be a boot vol
+- [[IOPS]]
+  - number of read/write ops per second
+  - use cases for this metric
+    - quick transactions
+    - low-latency apps
+    - transactional workloads
+  - ability to action reads and writes quickly
+  - choose provisioned [[IOPS]] SSD ([[io1]], [[io2]])
+- [[Throughput]]
+  - measures number of bits read or written per second (MB/s)
+  - use cases for this metric
+    - large datasets
+    - large I/O sizes
+    - complex queries
+  - deal with large datasets
+  - choose [[throughput]] optimized HDD ([[st1]])
+
+Review
+- [[EBS]] is [[High Availability|highly available]] and scalable storage volumes you attach to [[EC2]] instances
+- [[gp2]]
+  - boot disk, general apps
+  - up to 16,000 [[IOPS]] per vol
+  - 99.9% [[durability]]
+- [[gp3]]
+  - high performance apps
+  - predictable 3,000 [[IOPS]] baseline and 125 MiB/s regardless of vol size
+  - 99.9% [[durability]]
+- [[io1]]
+  - [[OLTP]], latency-sensitive, high performance
+  - 50 [[IOPS]] per GB
+  - up to 64,000 [[IOPS]] per vol
+  - high performance and most expensive
+  - 99.9% [[durability]]
+- [[io2]]
+  - [[OLTP]], latency-sensitive, high performance
+  - 500 [[IOPS]] per GiB
+  - up to 64,000 [[IOPS]] per vol
+  - 99.999% [[durability]]
+- [[st1]]
+  - [[big data]], [[data warehouse]], [[ETL]]
+  - max [[throughput]] of 500 MB/s per vol
+  - can't be boot vol
+  - 99.9% durability
+- [[sc1]]
+  - max [[throughput]] of 250 MB/s per vol
+  - less frequently accessed data
+  - can't be boot vol
+  - **lowest cost**
+  - 99.9% durability

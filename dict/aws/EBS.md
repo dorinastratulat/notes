@@ -1,0 +1,1 @@
+Amazon Elastic Block Store provides raw block-level storage that can be attached to Amazon [[EC2]] instances and is used by Amazon [[RDS|Relational Database Service]]. It is one of the two block-storage options offered by AWS, with the other being the [[EC2]] [[Instance Store]].

@@ -1,0 +1,1 @@
+Amazon Aurora (Aurora) is a fully managed relational database engine (see [[RDBMS]]) that's compatible with [[MySQL]] and [[PostgreSQL]].

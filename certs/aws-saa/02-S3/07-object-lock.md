@@ -1,0 +1,35 @@
+- [[s3]] object lock
+  - store objects in [[Write Once Read Many|WORM]]
+    - [[write once read many]]
+  - prevent objects from being deleted or modified
+    - fixed amount of time or indefinitely
+  - use to meet regulatory requirements
+  - extra layer of protection against changes and deletions
+  - modes:
+    - governance mode:
+      - users can't overwrite or delete object version or alter lock settings unless given special permissions
+      - project deletion from most users but still grant some users permission to alter retention or delete the object
+    - compliance mode:
+      - no one can delete or overwrite object (not even root user)
+      - retention mode can't be changed, retention period can't be shortened
+      - ensures object version cant be overwritten or deleted for duration of retention period
+  - retention period
+    - fixed amount of time for protection
+    - [[s3]] stores a timestamp of when protection should expire
+    - after expiry the object can be overwritten or deleted UNLESS legal hold is placed on object
+    - legal hold:
+      - [[s3]] object lock on an object version
+      - remains in effect until removed
+      - remove by user with permission
+- glacier vault lock:
+  - easily enforce compliance for individual glacier vaults with a vault lock policy
+  - specify controls like [[Write Once Read Many|WORM]] in a policy
+  - lock policy from future edits
+  - once locked, the policy can't be changed
+
+Review:
+- [[Write Once Read Many|WORM]] = [[s3]] object lock
+- object lock can be individual object or bucket wide
+- governance mode and compliance mode
+- [[Write Once Read Many|WORM]] + Glacier = glacier vault lock
+- vault lock policy locked from future edits

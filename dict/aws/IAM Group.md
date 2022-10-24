@@ -1,0 +1,1 @@
+An [[IAM]] user group is **a collection of [[IAM]] users**. User groups let you specify permissions for multiple users, which can make it easier to manage the permissions for those users. For example, you could have a user group called Admins and give that user group typical administrator permissions.

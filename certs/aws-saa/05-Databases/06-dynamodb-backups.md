@@ -1,0 +1,11 @@
+- on-demand backup and restore for [[DynamoDB]]
+	- full backups at any time
+	- zero impact on table performance or availability
+	- consistent within seconds and retained until deleted
+	- operates within the same region as the source table
+- point-in-time recovery
+	- protects against accidental writes or deletes
+	- restore to any point in the last 35 days
+	- incremental backups
+	- not enabled by default
+	- latest restorable time is 5 minutes in the past

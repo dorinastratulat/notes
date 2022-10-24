@@ -1,0 +1,33 @@
+# EBS & EFS 05 - EFS Overview
+
+- Elastic File System ([[EFS]])
+  - managed network file system ([[NFS]])
+  - mounted on many [[EC2]] instances at once
+  - works with [[EC2]] instances in multiple [[Availability Zone|AZs]]
+  - shared storage
+  - [[High Availability]], scalable
+  - expensive
+- use cases
+  - content management systems (CMS)
+	  - wordpress, etc.
+  - web servers
+- uses [[NFSv4]] protocol
+- compatible with Linux-based [[AMI]]
+  - no Windows support now
+- [[encryption]] at rest using [[KMS]]
+- file system that scales automatically
+- pay per use
+- performance
+  - thousands of concurrent connections
+  - 10 Gbps [[throughput]]
+  - petabytes scaling
+- controlling performance
+  - general purpose
+    - webservers, CMS
+  - max I/O
+    - data/media processing
+- storage tiers
+  - standard tier
+  - infrequently accessed tier
+  - lifecycle management
+- [[read-after-write consistency]]

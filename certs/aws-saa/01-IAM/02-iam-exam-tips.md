@@ -1,0 +1,10 @@
+- enable [[Multi-Factor Authentication|MFA]] on root account
+- create admin [[IAM Group|group]] and assign appropriate permissions
+- create user accounts for admins
+- add users to [[IAM]] admin group
+- assign perms with [[IAM]] [[policy document]]
+    - JSON
+- [[IAM]] is [[region]] agnostic
+- root account created when you set up AWS account
+- secure root account ASAP
+- new users have no permissions when first created

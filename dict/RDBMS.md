@@ -1,0 +1,1 @@
+A Relation Database Management system (RDBMS) is a database management system that is based on the relational model. It has the following major components: Table, Record/Tuple/Row, Field, and Column/Attribute. Examples of the most popular RDBMS are [[MySQL]], [[Oracle Database|Oracle]], [[IBM DB2]], and [[Microsoft SQL Server]] database.

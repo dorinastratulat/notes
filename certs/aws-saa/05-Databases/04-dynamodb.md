@@ -1,0 +1,45 @@
+# Databases 04 - DynamoDB
+
+- what is [[DynamoDB]]
+	- proprietary [[NoSQL]] database technology
+	- consistent single-digit millisecond latency at any scale
+	- fully managed
+	- supports document and key-value data models
+	- flexible reliable performance
+- high level
+	- stored on SSD storage
+	- spread accross 3 geographically distinct datacenters
+	- eventually consistent reads (default)
+		- consistency accross copies of all data is usually reached within a second
+		- repeating a read after a short time should return updated data
+		- best read performance
+	- strongly consistent reads (opt-in)
+		- returns a result that reflects all writes that received a successful response prior to that read
+		- no waiting for changes to take place
+- DynamoDB Accelerator ([[DAX]])
+	- fully managed
+	- [[High Availability|highly available]]
+	- in-memory cache
+	- 10x performance improvement over [[DynamoDB]]
+	- reduces request time from ms to µs even under load
+	- no need for devs to manage caching logic
+	- compatible with [[DynamoDB]] API calls
+- on-demand capacity
+	- pay-per-request pricing
+	- balance between cost and performance
+	- no minimum capacity
+	- pay more per request than provisioned capacity
+	- used for new product launches
+- security
+	- encryption at rest using [[KMS]]
+	- site-to-site VPN
+	- direct connect ([[DX]])
+	- [[IAM]] policies and roles
+		- fine-grained access
+	- [[CloudWatch]] and [[CloudTrail]]
+
+Review
+- stored on SSD
+- spread accross 3 geographically distinct datacenters
+- eventual consistent reads (default)
+- strongly consistent reads (opt-in)

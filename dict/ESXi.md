@@ -1,0 +1,1 @@
+[[VMware]] ESXi is an enterprise-class, type-1 hypervisor developed by [[VMware]] for deploying and serving virtual computers. As a type-1 hypervisor, ESXi is not a software application that is installed on an operating system; instead, it includes and integrates vital OS components, such as a kernel.

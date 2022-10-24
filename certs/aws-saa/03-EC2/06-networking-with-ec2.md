@@ -1,0 +1,32 @@
+# EC2 06 - Networking With EC2
+
+- networking options
+  - Elastic Network Interface ([[ENI]])
+    - basic day-to-day networking
+    - private [[IPv4]], [[MAC]], public [[IPv4]], many [[IPv6]]
+    - >= 1 security groups
+    - use cases
+      - management network
+      - network and security appliances
+      - dual homed instances, roles on distinct subnets
+      - low-budget high-availability solution
+  - Enhanced Networking ([[EN]])
+    - single root I/O virtualization ([[SR-IOV]])
+    - high performance networking
+    - 10 Gbps - 100 Gbps
+    - higher bandwidth
+    - higher packet per second
+    - consistently lower inter-instance latency
+    - 2 ways to use it
+      - Elastic Network Adapter ([[ENA]])
+        - supports up to 100 Gbps
+      - [[Intel 82599 Virtual Function interface|Intel 82599 Virtual Function (VF) Interface]]
+        - supports up to 10 Gbps
+        - used in older instances
+  - Elastic Fabric Adapter ([[EFA]])
+    - accelerate high performance computing ([[High Performance Computing|HPC]])
+    - accelerate [[machine learning]]
+    - network device you can attach to [[EC2]] instance
+    - lower more consistent latency
+    - OS-bypass enable [[High Performance Computing|HPC]] and [[Machine Learning|ML]] to bypass kernel and communicate directly on [[EFA]]
+      - linux only right now

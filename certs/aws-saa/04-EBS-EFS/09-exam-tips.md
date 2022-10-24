@@ -1,0 +1,88 @@
+# EBS & EFS 09 - Exam Tips
+
+- [[EBS]] SSD Volumes
+  - [[High Availability|HA]], scalable storage volumes
+  - attach to [[EC2]] instance
+  - [[gp2]]
+    - general purpose, boot disk
+    - up to 16,000 [[IOPS]] per vol
+    - up to 99.9% [[durability]]
+  - [[gp3]]
+    - high perf applications
+    - 3,000 [[IOPS]] baseline perf
+    - 125 MiB/s regardless of vol size
+    - 99.9% [[durability]]
+  - [[io1]]
+    - [[OLTP]], latency-sensitive
+    - 50 [[IOPS]] per GiB
+    - up to 64,000 [[IOPS]] per vol
+    - high performance and expensive
+    - 99.9% [[durability]]
+  - [[io2]]
+    - [[OLTP]], latency-sensitive
+    - 500 [[IOPS]] per GiB
+    - up to 64,000 [[IOPS]] per vol
+    - 99.999% [[durability]]
+- [[EBS]] HDD Volumes
+  - [[st1]]
+    - [[big data]], [[data warehouse]], [[ETL]]
+    - max [[throughput]] of 500 MB/s
+    - can't be boot vol
+    - 99.9% [[durability]]
+  - [[sc1]]
+    - less frequently accessed data
+    - max [[throughput]] of 250 MB/s
+    - can't be boot vol
+    - lowest cost
+    - 99.9% [[durability]]
+- Snapshots
+  - stored in [[S3]]
+  - point-in-time image of volume
+  - incremental/differential
+  - first snap will take time
+  - recommended to stop instance before snapshot
+  - share between AWS accounts and [[region]]s but need to copy the snapshot first
+- resize [[EBS]] vols on the fly
+- [[Instance Store]]s
+  - [[ephemeral]] store
+  - reboot without losing data
+  - cannot stop without losing data
+  - delete on termination of instance by default
+    - [[EBS]] vols can be changed
+- [[AMI]]
+  - blueprint for [[EC2]] instance
+- Encrypted volumes
+  - data at rest is encrypted
+  - data in flight is encrypted
+  - all snapshots are encrypted
+  - all vols created from snapshots are encrypted
+- [[EC2]] [[hibernation]]
+  - saves [[RAM]] to disk
+  - much faster boot-up
+  - resumes processes
+  - instance [[RAM]] < 150 GB
+  - available for C, M, R families of [[EC2]]
+  - win, amazon linux 2, ubuntu
+  - can't be hibernated for > 60 days
+  - on-demand instances and reserved instances
+- [[EFS]]
+  - [[NFSv4]] protocol
+  - thousands of concurrent connections
+  - pay for storage you use (no provisioning)
+  - data stored across multiple [[Availability Zone|AZs]] in [[region]]
+  - scale to petabytes
+  - [[read-after-write consistency]]
+  - linux only
+- [[FSx for Windows]]
+  - centralized windows shared storage
+- [[FSx for Lustre]]
+  - [[High Performance Computing|HPC]], [[Machine Learning|ML]]
+  - can store data on [[S3]]
+- AWS Backup
+  - backup across AWS services
+  - backup across AWS accounts with AWS Organizations
+  - centralized control
+  - automated backups
+  - lifecycle policies
+  - compliance 
+- 

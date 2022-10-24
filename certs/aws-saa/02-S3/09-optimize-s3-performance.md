@@ -1,0 +1,41 @@
+- [[S3]] prefixes
+  - `bucket_name/folder/subfolder/object.jpg`
+    - prefix: `folder/subfolder`
+  - `bucket_name/folder2/subfolder/object.jpg`
+    - prefix: `folder2/subfolder`
+  - `bucket_name/folder3/object.jpg`
+    - prefix: `folder3`
+- Performance
+  - low latency - first byte in 100-200 ms
+  - 3500 PUT/COPY/POST/DELETE per sec per prefix
+  - 5500 GET/HEAD requests    per sec per prefix
+  - more prefixes = higher performance
+  - two prefixes = 11,000 requests/sec
+  - four prefixes = 22,000 requests/sec
+- Limitations
+  - SSE-[[KMS]] has limits from [[KMS]]
+    - Upload calls   `GenerateDataKey`  in [[KMS]] API
+    - Download calls `Decrypt`         in [[KMS]] API
+    - [[region]] specific limits
+      - roughly 5,500, 10,000, or 30,000 requests/sec
+      - counts towards [[KMS]] quota
+      - can't request quota increase for [[KMS]]
+- Multi-part uploads
+  - >100 MB -> recommended
+  - >5   GB -> required
+  - parallelize uploads
+  - chunking big file and uploading all chunks in parallel
+- Byte-range fetches
+  - parallelize downloads by specifying byte ranges
+  - download failure only affects specific byte range
+  - speed up downloads
+  - download partial amounts of file (header info)
+
+Review:
+- prefix = folder and subfolder
+- more prefixes = more performance
+- SSE-[[KMS]] has builtin limits
+  - counts towards [[KMS]] quota
+  - can't increase quota
+- multi-part uploads for big files
+- byte-range fetch for downloading big files

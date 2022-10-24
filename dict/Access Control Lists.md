@@ -1,0 +1,1 @@
+In computer security, an access-control list is a list of permissions associated with a system resource. An ACL specifies which users or system processes are granted access to objects, as well as what operations are allowed on given objects. Each entry in a typical ACL specifies a subject and an operation.

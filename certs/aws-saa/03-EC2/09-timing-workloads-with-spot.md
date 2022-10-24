@@ -1,0 +1,33 @@
+# EC2 09 - Timing Workloads with Spot Instances
+
+- spot instance
+  - take advantage of unused [[EC2]] capacity
+  - up to 90% discount from on-demand
+- stateless, fault tolerant, flexible applications
+  - [[big data]]
+  - [[Container]]s
+  - [[CICD|CI/CD]]
+  - [[High Performance Computing|HPC]]
+  - test/development workloads
+  - image/media rendering
+- decide maximum spot price
+  - instance will be provisioned as long as current spot price is below your max spot price
+  - hourly spot price varies depending on capacity and [[region]] and [[Availability Zone|AZ]]
+  - if spot price goes above max, you have 2 minutes to decide
+    - can stop an instance to resume later
+    - can terminate an instance
+- spot blocks
+  - stop spot instances from being terminated
+  - even if spot price goes above your max
+  - block stops from 1-6 hours
+- not good for
+  - persistent workloads
+  - critical jobs (don't want instances to be stopped)
+  - databases
+- spot fleets
+  - collection of spot instances
+    - optionally on-demand instances
+  - attempts to launch the number of instances to meet the fleet request
+  - the request is fulfilled if max spot price > current spot price
+  - fleet maintains target capacity if spot instances are interrupted
+  - 

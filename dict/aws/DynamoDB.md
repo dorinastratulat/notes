@@ -1,0 +1,1 @@
+Amazon DynamoDB is a fully managed proprietary [[NoSQL]] database service that supports key–value and document data structures and is offered by Amazon.com as part of the Amazon Web Services portfolio. DynamoDB exposes a similar data model to and derives its name from Dynamo, but has a different underlying implementation.

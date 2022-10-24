@@ -1,0 +1,1 @@
+Amazon DocumentDB is a managed proprietary NoSQL database service that supports document data structures, with some compatibility with MongoDB version 3.6 and version 4.0. As a document database, Amazon DocumentDB can store, query, and index JSON data. It is available on Amazon Web Services.

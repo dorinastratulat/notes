@@ -1,0 +1,1 @@
+st1 is backed by hard disk drives (HDDs) and is ideal for frequently accessed, [[throughput]]-intensive workloads with large datasets and large I/O sizes, such as MapReduce, Kafka, log processing, [[data warehouse]], and [[ETL]] workloads.

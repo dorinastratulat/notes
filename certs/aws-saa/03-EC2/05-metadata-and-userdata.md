@@ -1,0 +1,6 @@
+- metadata
+  - data about [[EC2]] instance
+  - private/public [[IP]], hostname, etc.
+  - `curl http://169.254.169.256/latest/meta-data/local-ipv4` from within the instance to retrieve all metadata
+- user data
+  - `curl http://169.254.169.256/latest/meta-data/local-ipv4 > my_ip.txt` in bootstrap script

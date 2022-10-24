@@ -1,0 +1,1 @@
+In computing and in systems theory, FIFO is an acronym for first in, first out, a method for organizing the manipulation of a data structure where the oldest entry, or "head" of the queue, is processed first.

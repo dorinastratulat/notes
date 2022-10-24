@@ -1,0 +1,27 @@
+# EBS & EFS 07 - AMI: EBS vs Instance Store
+
+- Amazon Machine Image ([[AMI]])
+  - provides info to launch instance
+  - specify [[AMI]] when launching [[EC2]] instance
+  - based on
+    - [[region]]
+    - OS
+    - arch (32-bit, 64-bit)
+    - launch permissions
+    - storage for root device volume 
+  - backed by [[EBS]]
+    - root device is [[EBS]] volume
+    - created from [[EBS]] snapshot in [[AMI]]
+  - backed by [[Instance Store]]
+    - root device is [[Instance Store]] volume
+    - created from template volume stored in [[S3]]
+- [[Instance Store]] Volumes
+  - [[ephemeral]] storage
+  - if underlying host fails, data is gone
+  - reboot instance without losing data
+  - deleting instance deletes [[instance store]]
+- [[EBS]] Volumes
+  - can be stopped without losing data
+  - reboot without losing data
+  - root device deleted with instance delete by default
+    - can be disabled

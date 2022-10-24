@@ -1,0 +1,28 @@
+# EC2 11 - Extending AWS Beyond the Cloud with AWS Outposts
+
+- outposts
+  - brings AWS data center to you on-prem
+  - large variety of AWS services in your data center
+  - outpost sizes
+    - rack - 1U to 42U
+    - multi-rack deployments
+- benefits
+  - hybrid cloud
+  - fully managed infrastructure
+    - AWS will manage outpost infra
+  - brings consistency to your environment
+    - AWS management console, API, SDK to your on-prem environment
+- family
+  - outposts rack
+    - rack of servers
+    - single 42U rack to 96 racks
+    - AWS compute, storage, database,and other services
+  - outposts servers
+    - servers in 1U or 2U
+    - small space requirements
+    - provides local compute and networking services
+- process
+  - log into console
+  - order outpost config
+  - AWS staff will come on-site and install the hardware
+  - launch instances using console on outpost

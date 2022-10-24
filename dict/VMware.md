@@ -1,0 +1,1 @@
+VMware, Inc. is an American cloud computing and virtualization technology company with headquarters in Palo Alto, California. VMware was the first commercially successful company to virtualize the x86 architecture. VMware's desktop software runs on Microsoft Windows, Linux, and macOS.

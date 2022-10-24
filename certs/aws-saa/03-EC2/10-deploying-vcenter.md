@@ -1,0 +1,22 @@
+# EC2 10 - Deploying vCenter on AWS with VMware Cloud
+
+- [[VMware]]
+  - used by orgs around the world for private cloud deployments
+  - use cases
+    - hybrid cloud
+    - cloud migration using [[vmware]] tools
+    - disaster recovery
+    - leverage AWS
+- [[VMware]] cloud on AWS
+  - runs on dedicated hardware in AWS
+  - uses a single AWS account
+  - specs
+    - 2 sockets * 18-cores/socket
+    - 512 GiB [[RAM]]
+    - 15.2 TB Raw SSD
+  - each host is capable of running multiple [[VMware]] instances
+  - cluster can have 2 <= hosts <= 16
+- not yet in exam?
+- can deploy [[vCenter]] in AWS
+  - order from [[VMware]] themselves, not from AWS
+- 

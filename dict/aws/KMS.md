@@ -1,0 +1,1 @@
+AWS Key Management Service (KMS) **gives you centralized control over the cryptographic keys used to protect your data**. The service is integrated with other AWS services making it easy to encrypt data you store in these services and control access to the keys that decrypt it.

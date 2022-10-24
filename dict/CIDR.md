@@ -1,0 +1,1 @@
+Classless Inter-Domain Routing is a method for allocating [[IP]] addresses and for [[IP]] routing. The Internet Engineering Task Force introduced CIDR in 1993 to replace the previous classful network addressing architecture on the Internet.

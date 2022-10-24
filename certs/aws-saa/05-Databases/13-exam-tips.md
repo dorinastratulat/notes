@@ -1,0 +1,99 @@
+- Amazon [[RDS]]
+	- db types
+		- [[Microsoft SQL Server|SQL Server]], [[Oracle Database|Oracle]], [[MySQL]], [[PostgreSQL]], [[MariaDB]], [[Amazon Aurora]]
+	- [[OLTP]] workloads
+		- lots of small transactions
+	- Not suitable for [[OLAP]]
+		- use Redshift instead
+	- read-replicas
+		- scaling read performance
+		- not for disaster recovery
+		- requires automatic backups to be turned on 
+		- multiple read-replicas are supported
+			- 5 read-replicas for [[MySQL]], [[MariaDB]], [[PostgreSQL]], [[Oracle Database|Oracle]], [[Microsoft SQL Server|SQL Server]]
+	- multi-[[Availability Zone|AZ]]
+		- exact copy of database in another [[Availability Zone]]
+		- used for disaster recovery
+		- [[RDS]] will automatically failover to standby instance
+		- not for increasing performance
+		- backups are taken from the standby db
+	- [[Amazon Aurora]]
+		- proprietary [[RDBMS]]
+		- [[MySQL]] & [[PostgreSQL]] compatible
+		- always has 6 copies of your data
+			- 2 copies of data in each [[Availability Zone|AZ]]
+			- minimum of 3 [[Availability Zone]]s
+		- share snapshots with other AWS accounts
+		- 3 types of replicas available
+			- [[Amazon Aurora|Aurora]] replicas
+			- [[PostgreSQL]] or [[MySQL]] replicas
+		- Automatic failover only available for Aurora replicas
+		- automated backups enabled by default
+		- [[Amazon Aurora|Aurora]] Serverless
+			- simple cost effective for infrequent, intermittent, or unpredictable workloads
+			- serverless database = Aurora Serverless
+- [[DynamoDB]]
+	- stored on SSD storage
+	- spread accross 3 geographically distinct data centers
+	- eventually consistent reads (by default)
+		- consistency across all copies of data is usually reached within a second
+		- repeating a read after a short time should return updated data
+		- best read performance
+	- strongly consistent reads (opt-in)
+		- returns a result that reflects all writes that received a successful response prior to the read
+			- kind of returning all writes that were committed successfuly before reading
+	- Transactions
+		- multiple all-or-nothing transactions
+		- financial transactions
+		- fulfilling orders
+		- 3 options for reads
+			- eventual consistency
+			- strong consistency
+			- transactional
+		- 2 options for writes
+			- standard
+			- transactions
+		- up to 25 items in a transaction or 4MB of data
+	- question about [[ACID]] = [[DynamoDB]] Transaction
+		- all-or-nothing transactions
+	- on-demand backup and restore
+		- full backup at any time
+		- no impact on performance
+		- consistent within seconds
+		- retained until deleted
+		- same [[region]] as source table
+	- point-in-time recovery
+		- protects against accidental writes or deletes
+		- restore any point in the last 35 days
+		- backups are incremental
+		- not enabled by default
+		- last restorable = 5 minutes in the past
+	- streams
+		- [[FIFO]] record streams
+		- time-ordered sequence of item-level changes
+		- stored for 24 hours
+		- inserts, updates, deletes
+		- combine with [[lambda]] to add functionality like stored procedures
+	- global tables
+		- managed multi-master multi-[[region]] replication
+		- globally distributed applications
+		- based on [[DynamoDB]] streams
+		- multi-[[region]] redundancy for disaster recovery or [[high availability]]
+		- no application rewrites
+		- replication latency < 1 sec
+- [[DocumentDB]]
+	- mongo compatible databases in AWS
+	- migrating
+		- on-prem [[MongoDB]]
+		- AWS DMS
+		- Amazon [[DocumentDB]]
+- [[Keyspaces]]
+	- managed [[Apache Cassandra]] cluster in AWS cloud
+- [[Neptune]]
+	- [[graph database]] in AWS cloud
+- [[QLDB]] (Quantum [[Ledger Database]])
+	- immutable database
+- [[Timestream]]
+	- large amount of time-series data for analysis
+	- time-series database
+	- faster and more cost effective than relational for time-series

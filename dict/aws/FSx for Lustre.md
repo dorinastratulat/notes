@@ -1,0 +1,1 @@
+Amazon FSx for Lustre provides fully managed shared storage with the scalability and performance of the popular Lustre file system.

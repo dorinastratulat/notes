@@ -1,0 +1,27 @@
+# EBS & EFS 06 - FSx
+
+- [[FSx for Windows]]
+  - fully managed native Windows file system
+  - move windows apps that require file storage to AWS
+  - sharepoint migration, any MS migration
+  - built on windows server
+- [[FSx for Windows|FSx for Win]] vs [[EFS]]
+  - [[FSx for Windows|FSx]] runs Windows Server Message Block 
+    - ([[SMB]])-based file services
+  - [[FSx for Windows|FSx]] designed for Windows
+    - supports [[Active Directory|AD]] users, [[Access Control Lists|ACLs]], security, [[Distributed File System|DFS]]
+  - [[EFS]] designed for Linux
+- [[FSx for Lustre]]
+  - fully managed filesystem
+  - optimized for compute intensive workloads
+  - [[High Performance Computing|HPC]], [[Machine Learning|ML]], media processing, [[Electronic Design Automation|EDA]]
+  - performance
+    - processing massive datasets
+    - hundreds of GB per sec [[throughput]]
+    - millions of [[IOPS]]
+    - sub-millisecond latencies
+- exam
+  - different scenarios, choose [[EFS]], [[FSx for Windows]], [[FSx for Lustre]]
+  - [[EFS]] - distributed highly resilient storage for linux
+  - [[FSx for Windows]] - centralized storage for Windows applications
+  - [[FSx for Lustre]] - high speed high cap distributed storage

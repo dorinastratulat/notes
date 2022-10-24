@@ -1,0 +1,1 @@
+MariaDB is a community-developed, commercially supported fork of the [[MySQL]] relational database management system, intended to remain free and open-source software under the GNU General Public License.

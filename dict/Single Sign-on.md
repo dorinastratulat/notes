@@ -1,0 +1,1 @@
+_Single sign-on_ (_SSO_) is an authentication scheme that allows a user to log in with a single ID to any of several related, yet independent, software systems.

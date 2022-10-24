@@ -1,0 +1,1 @@
+In software engineering, CI/CD or CICD is the combined practices of continuous integration and continuous delivery or continuous deployment.
