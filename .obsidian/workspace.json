@@ -11,17 +11,21 @@
             "id": "3f8344ee007ff517",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "certs/aws-saa/06-VPC/01-overview.md",
+                "mode": "source",
+                "source": false
+              }
             }
           },
           {
-            "id": "d491888d64c0f82e",
+            "id": "24415bedf2a4e01a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "certs/aws-saa/06-VPC/aws-saa-vpc-01-overview.md",
+                "file": "certs/aws-saa/06-VPC/02-provisioning-a-vpc.md",
                 "mode": "source",
                 "source": false
               }
@@ -95,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "certs/aws-saa/06-VPC/aws-saa-vpc-01-overview.md",
+                "file": "certs/aws-saa/06-VPC/02-provisioning-a-vpc.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "certs/aws-saa/06-VPC/aws-saa-vpc-01-overview.md",
+                "file": "certs/aws-saa/06-VPC/02-provisioning-a-vpc.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -135,11 +139,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "certs/aws-saa/06-VPC/aws-saa-vpc-01-overview.md"
+                "file": "certs/aws-saa/06-VPC/02-provisioning-a-vpc.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -149,17 +154,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "d491888d64c0f82e",
+  "active": "24415bedf2a4e01a",
   "lastOpenFiles": [
+    "dict/aws/Region.md",
+    "certs/aws-saa/06-VPC/02-provisioning-a-vpc.md",
+    "certs/aws-saa/06-VPC/01-overview.md",
+    "dict/Untitled.md",
+    "Pasted image 20221024134033.png",
+    "README.md",
     "certs/aws-saa/05-Databases/06-dynamodb-backups.md",
     "certs/aws-saa/05-Databases/05-dynamodb-transactions.md",
     "certs/aws-saa/03-EC2/06-networking-with-ec2.md",
-    "dict/Graph Database.md",
-    "dict/Ledger Database.md",
-    "certs/aws-saa/05-Databases/13-exam-tips.md",
-    "certs/aws-saa/05-Databases/12-analyzing-time-series-with-timestream.md",
-    "certs/aws-saa/05-Databases/11-quantum-ledger-database.md",
-    "dict/ACID.md",
-    "certs/aws-saa/05-Databases/10-graph-db-neptune.md"
+    "dict/Graph Database.md"
   ]
 }
