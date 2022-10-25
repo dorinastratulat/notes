@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "certs/aws-saa/06-VPC/02-provisioning-a-vpc.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -82,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "b63546ef5aa36afc",
@@ -99,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "certs/aws-saa/06-VPC/02-provisioning-a-vpc.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "certs/aws-saa/06-VPC/02-provisioning-a-vpc.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -139,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "certs/aws-saa/06-VPC/02-provisioning-a-vpc.md"
+                "file": "README.md"
               }
             }
           }
@@ -154,17 +153,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "24415bedf2a4e01a",
+  "active": "c0466f76dfd3a5f3",
   "lastOpenFiles": [
-    "dict/aws/Region.md",
+    "dict/certs.md",
+    "README.md",
     "certs/aws-saa/06-VPC/02-provisioning-a-vpc.md",
+    "dict/aws/Region.md",
     "certs/aws-saa/06-VPC/01-overview.md",
     "dict/Untitled.md",
     "Pasted image 20221024134033.png",
-    "README.md",
     "certs/aws-saa/05-Databases/06-dynamodb-backups.md",
     "certs/aws-saa/05-Databases/05-dynamodb-transactions.md",
-    "certs/aws-saa/03-EC2/06-networking-with-ec2.md",
-    "dict/Graph Database.md"
+    "certs/aws-saa/03-EC2/06-networking-with-ec2.md"
   ]
 }
